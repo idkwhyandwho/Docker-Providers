@@ -2,12 +2,12 @@ from fastapi import FastAPI, HTTPException, Depends, Response
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 from prometheus_client import generate_latest
-from .health import check_docker_health, check_gpu_availability
+from health import check_docker_health, check_gpu_availability
 from typing import List, Optional, Union, Dict, Any
 import time
 import logging
-from .auth import get_api_key, rate_limiter, api_requests, request_duration
-from .model_manager import ModelManager
+from auth import get_api_key, rate_limiter, api_requests, request_duration
+from model_manager import ModelManager
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
