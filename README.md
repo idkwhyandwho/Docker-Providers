@@ -1,3 +1,12 @@
+---
+title: Docker-Providers
+emoji: 🐳
+colorFrom: blue
+colorTo: green
+sdk: docker
+app_port: 8000
+---
+
 # Docker-Providers
 
 This project provides an OpenAI-compatible API interface for running the SmolLM2 model using Docker Model Runner. It allows you to use SmolLM2 as a drop-in replacement for OpenAI's API, making it easy to integrate with existing applications.
