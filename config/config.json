@@ -1,0 +1,24 @@
+{
+    "models": {
+        "gpt-3.5-turbo": {
+            "image": "ai/model-runner:latest",
+            "model_path": "/models/gpt-3.5",
+            "max_tokens": 4096,
+            "temperature_range": [0.0, 2.0],
+            "default_temperature": 0.7
+        },
+        "text-embedding-ada-002": {
+            "image": "ai/embedding-runner:latest",
+            "model_path": "/models/embedding",
+            "dimension": 1536
+        }
+    },
+    "api": {
+        "rate_limits": {
+            "requests_per_minute": 60,
+            "tokens_per_minute": 40000
+        },
+        "default_timeout": 30,
+        "max_batch_size": 32
+    }
+}
